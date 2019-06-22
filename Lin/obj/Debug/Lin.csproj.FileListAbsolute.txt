@@ -6,4 +6,3 @@ D:\projects\lin\Lin\obj\Debug\Lin.csproj.GenerateResource.cache
 D:\projects\lin\Lin\obj\Debug\Lin.csproj.CoreCompileInputs.cache
 D:\projects\lin\Lin\obj\Debug\Lin.exe
 D:\projects\lin\Lin\obj\Debug\Lin.pdb
-D:\projects\lin\Lin\obj\Debug\Lin.csprojAssemblyReference.cache

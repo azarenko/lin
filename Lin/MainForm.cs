@@ -90,7 +90,13 @@ namespace Lin
                     Thread.Sleep(200);
                     continue;
                 }
-                
+
+                if (StaticContainer.transmmitBuffer.Count > 0)
+                {
+                    byte[] transmmitBuffre = StaticContainer.transmmitBuffer.Pop();
+                    StaticContainer.port.Transmmit(transmmitBuffre);
+                }
+
                 Packet p = null;
                 if (Packet.Parse(StaticContainer.port.Receive(), out p))
                 {
@@ -159,6 +165,25 @@ namespace Lin
                 {
                     StaticContainer.filter.Add(byte.Parse(item, System.Globalization.NumberStyles.AllowHexSpecifier));
                 }
+            }
+        }
+
+        private void _send_Click(object sender, EventArgs e)
+        {
+            StaticContainer.transmmitBuffer.Clear();
+            foreach (string line in _transmmit.Text.Split('\n'))
+            {
+                if (line.Length % 2 != 0)
+                {
+                    StaticContainer.transmmitBuffer.Clear();
+                    MessageBox.Show(string.Format("Hex value is not correct -> {0}", line));
+                }
+                byte[] buffer = new byte[line.Length / 2]; 
+                for (int i = 0; i < line.Length; i += 2)
+                {
+                    buffer[i / 2] = byte.Parse(line.Substring(i, 2), System.Globalization.NumberStyles.HexNumber);
+                }
+                StaticContainer.transmmitBuffer.Push(buffer);
             }
         }
     }

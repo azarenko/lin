@@ -1,6 +1,5 @@
 D:\projects\lin\Lin\bin\Release\Lin.exe
 D:\projects\lin\Lin\bin\Release\Lin.pdb
-D:\projects\lin\Lin\obj\Release\Lin.csprojAssemblyReference.cache
 D:\projects\lin\Lin\obj\Release\Lin.MainForm.resources
 D:\projects\lin\Lin\obj\Release\Lin.Properties.Resources.resources
 D:\projects\lin\Lin\obj\Release\Lin.csproj.GenerateResource.cache

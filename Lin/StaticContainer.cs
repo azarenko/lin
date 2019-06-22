@@ -11,5 +11,6 @@ namespace Lin
         public static IPort port;
         public static bool groupByFunc = false;
         public static List<byte> filter = new List<byte>();
+        public static Stack<byte[]> transmmitBuffer = new Stack<byte[]>();
     }
 }
